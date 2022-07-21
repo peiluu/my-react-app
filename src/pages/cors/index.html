@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script type="module">
+    import JsonP from './data.js';
+
+    window.callback = function (data) {
+      console.log(data);
+    }
+    JsonP('https://mch.med.gzhc365.com/api/index/hisInfo',{}, (err, data) => {
+      console.log('err', err);
+      console.log('data', data);
+    })    
+
+  </script>
+  <!-- <script src="http://localhost:3000/cors/data.js"></script> -->
+</body>
+</html>

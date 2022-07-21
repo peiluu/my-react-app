@@ -12,16 +12,20 @@ import Navbar from '../../components/navbar/Index';
 function Home() {
 	const listData = [
 		{
-			title: '1. redux',
+			title: '1.redux',
 			router: '/redux',
 		},
 		{
-			title: '1. context',
+			title: '2.context',
 			router: '/context',
 		},
 		{
-			title: '1. useref',
+			title: '3.useref',
 			router: '/useref',
+		},
+		{
+			title: '4. 跨域问题测试',
+			router: '/cors',
 		},
 	];
 	return (
