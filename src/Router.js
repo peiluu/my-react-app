@@ -11,6 +11,11 @@ import HocComponent from "./pages/hoccomponent/Index";
 import ContextTest from "./pages/context/Index";
 import UseRef from "./pages/useref/Index";
 import Cors from "./pages/cors/Index";
+import Bibao from "./pages/bibao/Index";
+import Proto from "./pages/__proto__/Index";
+import Call from "./pages/call/Index";
+import LeetCode from "./pages/leetcode/Index";
+import Es6 from "./pages/es6/Index";
 
 
 const BasicRoute = () => (
@@ -24,6 +29,11 @@ const BasicRoute = () => (
         <Route exact path="/context" component={ContextTest} />
         <Route exact path="/useref" component={UseRef} />
         <Route exact path="/cors" component={Cors} />
+        <Route exact path="/bibao" component={Bibao} />
+        <Route exact path="/proto" component={Proto} />
+        <Route exact path="/call" component={Call} />
+        <Route exact path="/leetcode" component={LeetCode} />
+        <Route exact path="/es6" component={Es6} />
         <Route render={() => <Redirect to="/home" />} />9
       </Switch>
     </Router>

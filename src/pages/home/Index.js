@@ -24,8 +24,28 @@ function Home() {
 			router: '/useref',
 		},
 		{
-			title: '4. 跨域问题测试',
+			title: '4.跨域问题测试',
 			router: '/cors',
+		},
+		{
+			title: '5.闭包理解',
+			router: '/bibao',
+		},
+		{
+			title: '5.原型及原型链理解',
+			router: '/proto',
+		},
+		{
+			title: '6.call、bind、apply函数差异',
+			router: '/call',
+		},
+		{
+			title: '7.leetcode算法实践',
+			router: '/leetcode',
+		},
+		{
+			title: '8.es6新特性',
+			router: '/es6',
 		},
 	];
 	return (
