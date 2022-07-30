@@ -20,15 +20,15 @@ function Home() {
 			router: '/context',
 		},
 		{
-			title: '3.useref',
-			router: '/useref',
+			title: '3.hooks实践',
+			router: '/hooks',
 		},
 		{
 			title: '4.跨域问题测试',
 			router: '/cors',
 		},
 		{
-			title: '5.闭包理解',
+			title: '5.理解函数作用域、执行上下文、闭包、this指向问题',
 			router: '/bibao',
 		},
 		{
@@ -40,8 +40,8 @@ function Home() {
 			router: '/call',
 		},
 		{
-			title: '7.leetcode算法实践',
-			router: '/leetcode',
+			title: '7.virtualdom理解',
+			router: '/virtualdom',
 		},
 		{
 			title: '8.es6新特性',

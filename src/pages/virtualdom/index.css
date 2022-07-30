@@ -1,0 +1,21 @@
+.outerBox {
+	width: 300px;
+	height: 300px;
+	color: red;
+	border: 1px solid red;
+	/* position: relative;
+	 */
+	display: table-cell;
+	text-align: center;
+	vertical-align: middle;
+	/* justify-content: center; */
+}
+
+.innerBox {
+	width: 100px;
+	height: 100px;
+	display: inline-block;
+	border: 1px solid black;
+	/* align-self: center; */
+}
+

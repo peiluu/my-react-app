@@ -7,32 +7,49 @@ import './index.less';
 import configStore from '../../store/index';
 // import { connect, mapStateToProps } from "react-redux";
 
-class Redux extends Component {
+class Index extends Component {
 	constructor(props) {
 		super(props);
 	}
 	componentDidMount() {
-		// console.log(styles)
-	}
-
-	render() {
+		console.log(this);
 		/**
-		 * Map数据和Set数据的差异
+		 * Set、WeakSet、 Map、WeakMap的差异
 		 */
-		const set = new Set([1, 1, 1, 2]);
-		const newArr = [...set];
-		const newArr1 = Array.from(set);
-		// console.log(newArr);
-		// console.log(newArr1);
+		const set = new Set([() => {}]);
+		const newSet = [...set];
+		const newSet1 = Array.from(set);
+		// console.log(newSet);
+		/**
+		 * Set表示无重复值的有序列表，Set 可以接收一个数组做为参数，用来初始化
+		 * WeakSet与Set的区别 （weak - 弱）
+		 * 1. WeakSet成员只能是引用类型，而不能是其他类型的值
+		 * 2. 没有遍历操作的API（entries、keys等），没有size属性
+		 */
+		const weakSet = new WeakSet(
+			[() => {}],
+			() => {},
+			() => {}
+		);
+		// const weakSet = new WeakSet([1]);
+		// console.log('weakSet', weakSet);
+		// console.log(weakSet.entries());
 
+		/**
+		 * Map类型是键值对的有序列表，键和值是任意类型
+		 * Map、WeakMap的区别 （weak - 弱）`
+		 * 1. WeakMap只接受对象作为键名（null除外,因为typeof null为object），不接受其他类型的值作为键名
+		 * 2. 没有遍历操作的API（entries、keys等）
+		 */
 		const map = new Map();
 		map.set({}, 11111);
-		map.set(null, 11111);
-		console.log(map);
-		console.log({
-			1: 1,
-			2: 2,
-		});
+		map.set(undefined, 11111);
+		// console.log('map', map);
+
+		const weakMap = new WeakMap();
+		weakMap.set({}, 11111);
+		// weakMap.set(null, 11111);
+		// console.log('weakMap', weakMap);
 
 		/**
 		 * Symbol类型
@@ -69,48 +86,49 @@ class Redux extends Component {
 				js: 70,
 			},
 		};
-
 		// console.log(grade[user1.key]);
 		/**
 		 *深浅拷贝方法
 		 * Object.create()方法用于创建一个新对象，并把新对象的原型对象指向该方法的第一个参数。
 		 */
-
 		const father = {
 			age: 18,
 		};
 
 		const son = Object.create(father);
-		console.log(son.age);
-		console.log(son.__proto__);
+		// console.log(son.age);
+		// console.log(son.__proto__);
 
 		/**
 		 * js事件循环机制
 		 */
 		setTimeout(() => {
 			// 异步任务 - 宏任务 - 计时器线程将setTimeout回调送入宏队列等待微任务队列全部执行完毕，再执行
-			console.log('计时器执行');
+			// console.log('计时器执行');
 		}, 0);
 		// 同步任务 - 按照顺序由js主线程直接执行
 		for (let i = 0; i < 100; i++) {
-			console.log('i', i);
+			// console.log('i', i);
 		}
 
 		// 同步任务
 		for (let j = 0; j < 100; j++) {
-			console.log('j', j);
+			// console.log('j', j);
 		}
 		// 异步任务 - 微任务（vip）- 优先执行
 		Promise.resolve().then(() => {
-			console.log('Promise执行');
+			// console.log('Promise执行');
 		});
+	}
 
+	render() {
+		console.log('render函数this指向', this);
 		return (
 			<div>
-				<span className='block'>样式阻隔</span>
+				<span className='block'>es6新特性</span>
 			</div>
 		);
 	}
 }
 
-export default Redux;
+export default Index;
